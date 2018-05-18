@@ -1,0 +1,23 @@
+<div class="container">
+  
+  <div class="leftpane">
+     <ul>
+		  {{#each model.categories as |category|}}
+		      {{category.name}} <input type= "checkbox"><br>
+		  {{/each}}
+	  </ul>
+  </div>
+  <div class="middlepane">
+  		<div class ="searchpane">
+  		 	<input type = "textbox" placeholder = "Search Book"/>
+  		</div>
+  		<div align= "left">
+	       <ul>
+			  {{#each model.books as |book|}}
+			      {{book.bookname}} <br>
+			  {{/each}}
+		  </ul>
+	  </div>
+  </div>	
+   {{outlet}}
+</div>
