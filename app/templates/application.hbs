@@ -1,8 +1,26 @@
 <div class="container">
-  <div class="toppane" align="center"><h1>Book Store</h1></div>
-  <div class="leftpane">
-    <h1>Categories</h1></div>
-  <div class="middlepane" align = "left"><h1>Books</h1></div>
-
-   {{outlet}}
+  <div class="menu">
+    {{#link-to 'home'}}
+      <h1>
+        <em>BookStore</em>
+      </h1>
+    {{/link-to}}
+    <div class="links" align="right">
+      {{#link-to 'about' class="menu-about"}}
+        About
+      {{/link-to}}
+      {{#link-to 'contact' class="menu-contact"}}
+        Contact
+      {{/link-to}}
+      {{#link-to 'user' class="menu-contact"}}
+        SignUp
+      {{/link-to}}
+      {{#link-to 'signin' class="menu-contact"}}
+        Log In
+      {{/link-to}}
+    </div>
+  </div>
+  <div class="body">
+    {{outlet}}
+  </div>
 </div>

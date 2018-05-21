@@ -4,7 +4,7 @@ import Controller from '@ember/controller';
 export default Controller.extend({
 	validation:{
 		firstname: {
-			presence:true
+			presence:true,
 		}
 	},
 	actions: {
@@ -15,9 +15,6 @@ export default Controller.extend({
       var contact = this.get('contact');
       var password = this.get('password')
       var password_confirm = this.get('password_confirm')
-
-
-      
       var user = this.store.createRecord('user', {
         firstname: firstname,
         lastname: lastname,
