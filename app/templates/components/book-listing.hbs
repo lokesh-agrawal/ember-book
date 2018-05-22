@@ -1,5 +1,5 @@
 <article class="listing">
-  <h3>{{book.bookname}}</h3>
+ <h3>{{#link-to "home.show" book}}{{book.bookname}}{{/link-to}}</h3>
   <div class="detail owner">
     <span>Author:</span> {{book.author}}
   </div>

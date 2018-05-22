@@ -1,20 +1,2 @@
-<div class = "container">
-  <div class="leftpane">
-     <ul>
-      {{#each model.categories as |categoryUnit|}}
-          {{category-listing category=categoryUnit}}
-      {{/each}}
-    </ul>
-  </div>
-  
-  <div class="middlepane">
-      {{input value=search}}
 
-    <ul>
-        {{#each model.books as |bookUnit|}}
-          {{book-listing book = bookUnit}}
-        {{/each}}
-    </ul>
-  
-  </div>
-</div>
+{{outlet}}
