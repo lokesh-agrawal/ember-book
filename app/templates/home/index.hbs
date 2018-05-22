@@ -1,21 +1,30 @@
+
+
 <div class = "container">
-  <div class="leftpane">
+    <div class="leftpane">
      <ul>
       {{#each model.categories as |categoryUnit|}}
           {{category-listing category=categoryUnit}}
       {{/each}}
-    </ul>
-  </div>
+     </ul>
+    </div>
   
   <div class="middlepane">
-      {{input value=search}}
-
-    <ul>
-        {{#each model.books as |bookUnit|}}
-          {{book-listing book = bookUnit}}
-        {{/each}}
-    </ul>
-  
-  </div>
+     <div class="row margin-bottom">
+    	<div class="col-md-6">
+        	<div class="input-group">
+            	<span class="input-group-addon">@</span>
+            	{{input value=filter class="form-control" placeholder="Filter" }}
+        	</div>
+    	</div>
+	</div>
+	<div class="row">
+    	{{#each filteredBooks as |bookUnit|}}
+        <div class="col-md-4">
+            {{book-listing book=bookUnit}}
+        </div>
+    	{{/each}}
+	</div>
+   </div>
 </div>
 {{outlet}}
