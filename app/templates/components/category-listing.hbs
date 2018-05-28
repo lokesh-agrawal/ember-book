@@ -1,3 +1,5 @@
 <article class="listing">
-  <h3>{{category.name}}<input type= "checkbox"></h3>
+ <div class="col-md-4">
+    <input type="checkbox" value={{category.name}} onchange= {{action "changeCheck" value=value}}>{{category.name}}<br/>
+ </div>
 </article>

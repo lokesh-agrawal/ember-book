@@ -5,7 +5,9 @@ export default Route.extend({
     return Ember.RSVP.hash({
       categories: this.get('store').findAll('category'),
       books: this.get('store').findAll('book')
+     })
+ 
 
-  });
-}
+    }
+
 });

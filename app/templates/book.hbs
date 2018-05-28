@@ -1,7 +1,14 @@
 <form {{action 'createBook' on="submit"}}>
+
   {{input type="text" value=bookname placeholder="Book Name"}}
   {{input type="text" value=author placeholder="Author"}}
   {{input type="text" value=description placeholder="Description"}}
   {{input type="text" value=reviews placeholder="Reviews"}}
+   <select onchange={{action "selectVehicle" value="target.value"}}>
+  {{#each model.categories as |vehicleChoice|}}
+    <option value={{vehicleChoice.name}} selected={{eq model.categories vehicleChoice.name}}>{{vehicleChoice.name}}</option>
+  {{/each}}
+</select>
+
   <button type="submit">Add Book</button>
 </form>
